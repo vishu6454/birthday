@@ -1,0 +1,27 @@
+/* ---------- Reduced Motion ---------- */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- Focus visible (a11y) ---------- */
+:focus-visible {
+  outline: 2px solid #FF6B9D;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Prevent layout shift on image load ---------- */
+img { background: #1e1233; }
